@@ -3,13 +3,11 @@ package stack;
 public class Stack {
 
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-	public Object size() {
-		// TODO Auto-generated method stub
-		return null;
+	public int size() {
+		return 0;
 	}
 
 }
