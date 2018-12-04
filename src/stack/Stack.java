@@ -10,4 +10,14 @@ public class Stack {
 		return 0;
 	}
 
+	public void push(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object top() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
