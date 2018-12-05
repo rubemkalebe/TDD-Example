@@ -24,6 +24,10 @@ public class Stack {
 	}
 
 	public Object pop() {
+		if(this.isEmpty()) {
+			throw new EmptyStackException();
+		}
+		
 		Object element = this.top();
 		this.size--;
 		return element;
