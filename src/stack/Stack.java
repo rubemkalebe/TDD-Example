@@ -23,4 +23,9 @@ public class Stack {
 		return this.element;
 	}
 
+	public Object pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
