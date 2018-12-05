@@ -42,13 +42,17 @@ public class StackTest {
 		s.pop();
 	}
 	
-	@Test(expected = FullStackException.class)
+	@Test
 	public void pushFullStackTest() {
 		Stack s = new Stack();
 		for(int i = 1; i <= 10; i++) {
 			s.push("Element " + i);
 		}
-		s.push("Element 11");
+		
+		try {
+			s.push("Element 11");
+			fail();
+		} catch(FullStackException e) {	}
 	}
 
 }

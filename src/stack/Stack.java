@@ -15,6 +15,9 @@ public class Stack {
 	}
 
 	public void push(Object element) {
+		if(this.size == elements.length) {
+			throw new FullStackException();
+		}
 		this.elements[this.size] = element;
 		this.size++;
 	}
