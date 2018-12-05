@@ -2,12 +2,12 @@ package stack;
 
 public class Stack {
 
-	private Object element;
+	private Object[] elements = new Object[10];
 	
 	private int size = 0;
 	
 	public boolean isEmpty() {
-		return this.element == null;
+		return this.size == 0;
 	}
 
 	public int size() {
@@ -15,17 +15,18 @@ public class Stack {
 	}
 
 	public void push(Object element) {
-		this.element = element;
-		size++;
+		this.elements[this.size] = element;
+		this.size++;
 	}
 
 	public Object top() {
-		return this.element;
+		return this.elements[this.size-1];
 	}
 
 	public Object pop() {
-		// TODO Auto-generated method stub
-		return null;
+		Object element = this.top();
+		this.size--;
+		return element;
 	}
 
 }
