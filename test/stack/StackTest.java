@@ -54,5 +54,11 @@ public class StackTest {
 			fail();
 		} catch(FullStackException e) {	}
 	}
+	
+	@Test(expected = EmptyStackException.class)
+	public void topEmptyStackTest() {
+		Stack s = new Stack();
+		s.top();
+	}
 
 }
