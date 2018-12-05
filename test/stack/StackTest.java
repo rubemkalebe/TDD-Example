@@ -37,9 +37,18 @@ public class StackTest {
 	}
 	
 	@Test(expected = EmptyStackException.class)
-	public void popTest() {
+	public void popEmptyStackTest() {
 		Stack s = new Stack();
 		s.pop();
+	}
+	
+	@Test(expected = FullStackException.class)
+	public void pushFullStackTest() {
+		Stack s = new Stack();
+		for(int i = 1; i <= 10; i++) {
+			s.push("Element " + i);
+		}
+		s.push("Element 11");
 	}
 
 }
