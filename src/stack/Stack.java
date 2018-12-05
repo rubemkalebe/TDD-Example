@@ -23,6 +23,9 @@ public class Stack {
 	}
 
 	public Object top() {
+		if(this.isEmpty()) {
+			throw new EmptyStackException();
+		}
 		return this.elements[this.size-1];
 	}
 
