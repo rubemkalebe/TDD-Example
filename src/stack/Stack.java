@@ -2,22 +2,25 @@ package stack;
 
 public class Stack {
 
+	private Object element;
+	
+	private int size = 0;
+	
 	public boolean isEmpty() {
-		return true;
+		return this.element == null;
 	}
 
 	public int size() {
-		return 0;
+		return this.size;
 	}
 
-	public void push(String string) {
-		// TODO Auto-generated method stub
-		
+	public void push(Object element) {
+		this.element = element;
+		size++;
 	}
 
 	public Object top() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.element;
 	}
 
 }
