@@ -35,5 +35,11 @@ public class StackTest {
 		assertEquals("first", s.top());
 		assertEquals("second", element);
 	}
+	
+	@Test(expected = EmptyStackException.class)
+	public void popTest() {
+		Stack s = new Stack();
+		s.pop();
+	}
 
 }
